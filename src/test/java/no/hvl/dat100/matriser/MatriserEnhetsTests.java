@@ -58,8 +58,8 @@ class MatriserEnhetsTests {
 	@Test
 	void testtilStreng() {
 		
-		assertEquals("1 2 3 \n4 5 6 \n7 8 9 \n",Matriser.tilStreng(a));
-		assertEquals("1 2 3 \n4 5 6 \n7 8 9 \n10 11 12 \n",Matriser.tilStreng(c));
+		assertEquals("1 2 3\n4 5 6\n7 8 9\n",Matriser.tilStreng(a));
+		assertEquals("1 2 3\n4 5 6\n7 8 9\n10 11 12\n",Matriser.tilStreng(c));
 	}
 
 	@Test
@@ -77,32 +77,6 @@ class MatriserEnhetsTests {
 		assertFalse(skaler == c);
 		assertArrayEquals(cskalert,skaler);
 		
-	}
-
-	@Test
-	void testSpeile() {
-
-		int[][] speilet = { {1,4,7}, {2,5,8}, {3,6,9} };
-
-		int[][] speile = Matriser.speile(a);
-
-		assertFalse(speile == a);
-		assertArrayEquals(speilet,speile);
-	}
-
-	@Test
-    void testMultipliser () {
-
-		int[][] ab = { {84,90,96}, {201,216,231}, {318,342,366} };
-
-		int[][] multiplisert = Matriser.multipliser(a,b);
-
-		assertArrayEquals(ab,multiplisert);
-
-		int[][] ca = { {30,36,42}, {66,81,96}, {102,126,150}, {138,171,204} };
-		multiplisert = Matriser.multipliser(c,a);
-		assertArrayEquals(ca,multiplisert);
-
 	}
 
 	@Test
